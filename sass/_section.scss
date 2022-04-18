@@ -1,0 +1,68 @@
+.hero{
+  min-height: 530px;
+  background: url(../img/hero.png) no-repeat center/cover; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content{
+    text-align: center;
+    
+  }
+  &__descr{
+    color: #fff;
+    margin-bottom: 48px;
+  }
+}
+
+.excerpt{
+  min-height: 262px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &__content{
+    text-align: center;
+  }
+  &__link {
+    text-decoration: none;
+    color: $secondary-color;
+    font-size: 15px;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 0;
+
+    &:hover {
+      border-bottom:2px solid rgba($secondary-color, 0.3);
+    }
+  }
+}
+.mail{
+  min-height: 327px;
+  background-color: $main-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  &__content{
+    text-align: center;
+  }
+  &__mailing{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__field{
+    width:350px;
+    height: 54px;
+    background-color: $main-color;
+    border: 1px solid #2F303E;
+    text-align: center;
+  }
+}
+.box{
+  &__norm{
+    padding-top: 7px;
+  }
+}

@@ -1,0 +1,19 @@
+.container{
+  max-width: 940px;
+  margin: 0 auto;
+}
+.header{
+  padding: 28px 20px;
+
+  &__menu{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+.footer{
+  min-height: 352px;
+  display: flex;
+  justify-content: space-between;
+  margin: 103px 250px 48px 250px;
+}

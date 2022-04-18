@@ -1,0 +1,69 @@
+.heading {
+  font-weight: 400;
+  &--h1{
+    font-size: 47px;
+    line-height: 60px;
+    margin: 10px 0;
+  } 
+  &--h2{
+    font-size: 36px;
+    line-height: 50px;
+    margin: 15px 0 25px 0;
+  }
+  &--h3{
+    font-size: 28px;
+    line-height: 40px;
+    margin: 123px 0 16px 0;
+  }
+  &--light{
+    color: #fff;
+  }
+  &--dark{
+    color: $main-color;
+  }
+}
+.caption{
+  text-transform:uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  &--light{
+    color: #fff;
+  }
+}
+.descr{
+  &--dark{
+  color: rgba($main-color, 0.7);
+  }
+  &--light{
+    color: #fff;
+  }
+  &__norm{
+    padding-top: 15px;
+  }
+  &--small{
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 12px;
+  }
+  &--medium{
+    font-size: 14px;
+    line-height: 22px;
+    
+  }
+  &--big{
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+}
+.lead{
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.email{
+  font-size: 23px;
+  line-height: 36px;
+}

@@ -1,0 +1,73 @@
+.cart{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__badge{
+    padding: 3px 6px;
+    background-color:$main-color ;
+    color: #fff;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+}
+.line{
+  width: 30px;
+  height: 1px;
+  border-radius: 0px;
+  &--dark{
+    color: rgba(210, 210, 213, 0.1);
+  }
+  &--light{
+    color: #ECECED;
+  }
+}
+.dashes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 15px;
+}
+.button{
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  line-height: 18px;
+  letter-spacing: 2px;
+
+  &--small{
+    padding: 0 24px;
+
+  }
+
+  &--medium{
+    padding: 9px 24px;
+  }
+
+  &--large{
+    padding: 18px 24px;
+  }
+  &--light{
+    color: $main-color;
+    background-color: #fff;
+  }
+  &--dark{
+    color: #fff;
+    background-color: $main-color;
+  }
+}
+.copy{
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(29, 31, 46, 0.3);
+  &__bigpad{
+  padding-top: 94px;
+  }
+  &__smallpad{
+    padding-top: 47px;
+  }
+}
+
