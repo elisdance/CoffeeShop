@@ -1,0 +1,33 @@
+.promo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &__collage{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    
+    &-img{
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    &--small{
+      flex-basis: 160px;
+    }
+
+    &--big{
+      flex-basis: 280px;
+      max-height: 280px;
+    }
+  }
+}
+}
+.pic{
+  padding-bottom: 15px;
+  max-height:auto;
+}
+.text{
+  margin-top: -15px;
+}
