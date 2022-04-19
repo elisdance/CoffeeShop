@@ -1,6 +1,7 @@
 .container{
-  max-width: 940px;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .header{
   padding: 28px 20px;
@@ -13,7 +14,9 @@
 }
 .footer{
   min-height: 352px;
+  max-width: 940px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 103px 250px 48px 250px;
 }
