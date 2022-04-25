@@ -1,19 +1,23 @@
 .container{
-  max-width: 940px;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .header{
   padding: 28px 20px;
 
   &__menu{
     display: flex;
+    flex-direction: row;
     text-align: center;
     justify-content: space-between;
   }
 }
 .footer{
-  min-height: 352px;
+  max-height: 352px;
+  max-width: 940px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 103px 250px 48px 250px;
+  margin: 103px auto 48px auto;
 }

@@ -1,0 +1,28 @@
+.promo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &__collage{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+    &-block{
+    min-height:280px ;
+    display: flex;
+    flex-direction:column;
+    }
+    &--small{
+      flex-basis: 160px;
+    }
+    &--big{
+      flex-basis: 280px;
+    }
+  }
+}
+.pic{
+  margin-bottom: -10px;
+}
+.text{
+  margin-top: -15px;
+}

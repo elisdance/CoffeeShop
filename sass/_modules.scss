@@ -3,6 +3,8 @@
   align-items: center;
   gap: 10px;
 
+ 
+
   &__badge{
     padding: 3px 6px;
     background-color:$main-color ;
@@ -40,7 +42,6 @@
 
   &--small{
     padding: 0 24px;
-
   }
 
   &--medium{
@@ -54,9 +55,21 @@
     color: $main-color;
     background-color: #fff;
   }
+  &--light:hover{
+    color:#fff;
+    background-color: $main-color;
+    border: 1px solid #fff;
+    transition:0.9s;
+  }
   &--dark{
     color: #fff;
     background-color: $main-color;
+  }
+  &--dark:hover{
+    color:$main-color;
+    background-color: #fff;
+    border: 1px solid $main-color;
+    transition:0.9s;
   }
 }
 .copy{

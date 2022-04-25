@@ -1,0 +1,82 @@
+.products{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  &__card{
+    text-align: center;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding-bottom: 65px;
+ 
+  &--big{
+    flex-basis: 460px;
+    width: 100%;
+  }
+
+  &--small{
+    flex-basis: 300px;
+    width: 100%;
+  }
+  
+    &-title{
+      margin: 35px 0 5px;
+      font-size: 20px; 
+      letter-spacing: 2px;
+      }
+    &-price{
+      font-size: $base-font-size;
+      margin: 0;
+      padding-top: 5px;
+
+      &--simple{
+      color: rgba($main-color,0.7);
+      }
+    }
+  
+  &--sale{
+    color: $secondary-color;
+    font-size: 19px;
+  }
+  &--previous{
+    color: rgba($main-color, 0.4);
+    text-decoration: line-through;
+    padding-left:10px;
+    font-size: $base-font-size;
+    padding-top: 5px;
+    }
+  }
+}
+
+.previews{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 102px;
+
+  &__card{
+    -webkit-box-flex: 5;
+    flex-grow: 5;
+    max-width: 300px;
+
+    &-title{
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &-text{
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba($main-color,0.7);
+      margin-top: -15px;
+    }
+    &-img{
+      flex-basis: 300px;
+    }
+  }
+}
+a{
+  text-decoration: none;
+  color: $main-color;
+}
