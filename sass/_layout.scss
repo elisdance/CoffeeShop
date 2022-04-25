@@ -8,15 +8,16 @@
 
   &__menu{
     display: flex;
+    flex-direction: row;
     text-align: center;
     justify-content: space-between;
   }
 }
 .footer{
-  min-height: 352px;
+  max-height: 352px;
   max-width: 940px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 103px 250px 48px 250px;
+  margin: 103px auto 48px auto;
 }

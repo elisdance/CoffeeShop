@@ -9,19 +9,17 @@
     flex-grow: 1;
     margin-bottom: 20px;
     padding-bottom: 65px;
-
+ 
   &--big{
     flex-basis: 460px;
+    width: 100%;
   }
 
   &--small{
     flex-basis: 300px;
-  }
-  &-img{
-    max-width: 100%;
     width: 100%;
-    height: auto;
-    }
+  }
+  
     &-title{
       margin: 35px 0 5px;
       font-size: 20px; 

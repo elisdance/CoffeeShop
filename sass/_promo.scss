@@ -7,26 +7,21 @@
     flex-grow: 1;
     display: flex;
     gap: 20px;
-    position: relative;
-    
-    &-img{
-      max-width: 100%;
-      width: 100%;
-      height: auto;
+    &-block{
+    min-height:280px ;
+    display: flex;
+    flex-direction:column;
+    }
     &--small{
       flex-basis: 160px;
     }
-
     &--big{
       flex-basis: 280px;
-      max-height: 280px;
     }
   }
 }
-}
 .pic{
-  padding-bottom: 15px;
-  max-height:auto;
+  margin-bottom: -10px;
 }
 .text{
   margin-top: -15px;
