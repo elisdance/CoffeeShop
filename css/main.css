@@ -366,10 +366,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   text-align: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -390,15 +386,13 @@ body {
   margin: 103px auto 48px auto;
 }
 
-.menu {
-  position: absolute;
-  margin: 0 auto 0 70%;
-}
 .menu__list {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -410,11 +404,34 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 12px 0 0 5px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   bottom: 0;
+}
+.menu__link:hover::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgba(162, 95, 75, 0.3);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
 
 .pagination {
@@ -445,124 +462,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 10px;
-}
-
-.lines {
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: #1D1F2E;
-}
-
-.lines:hover {
-  color: #1D1F2E;
-}
-
-.lines {
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-}
-
-.menu__list:hover .lines {
-  border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-}
-
-.menu__list .lines {
-  display: block;
-  height: 40px;
-  text-align: right;
-  font: bold 15px/40px;
-  text-decoration: none;
-  color: #1D1F2E;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-
-.menu__list:hover .lines {
-  color: #1D1F2E;
-}
-
-.menu__item {
-  width: 150px;
-  height: 40px;
-  background: #F7F7F7;
-  font: normal 12px/40px;
-  color: #999;
-  text-align: center;
-  margin: 0;
-  -webkit-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: perspective(350px) rotateX(-90deg);
-  transform: perspective(350px) rotateX(-90deg);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.menu__item.n1 {
-  -webkit-transition: 0.2s linear 0.8s;
-  transition: 0.2s linear 0.8s;
-}
-
-.menu__item.n2 {
-  -webkit-transition: 0.2s linear 0.6s;
-  transition: 0.2s linear 0.6s;
-}
-
-.menu__item.n3 {
-  -webkit-transition: 0.2s linear 0.4s;
-  transition: 0.2s linear 0.4s;
-}
-
-.menu__item.n4 {
-  -webkit-transition: 0.2s linear 0.2s;
-  transition: 0.2s linear 0.2s;
-}
-
-.menu__item.n5 {
-  -webkit-transition: 0.2s linear 0s;
-  transition: 0.2s linear 0s;
-}
-
-.menu__list:hover li {
-  -webkit-transform: perspective(350px) rotateX(0deg);
-  transform: perspective(350px) rotateX(0deg);
-  -webkit-transition: 0.2s linear 0s;
-  transition: 0.2s linear 0s;
-}
-
-.menu__list:hover .n2 {
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-
-.menu__list:hover .n3 {
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-
-.menu__list:hover .n4 {
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  transition-delay: 0.6s;
-}
-
-.menu__list:hover .n5 {
-  -webkit-transition-delay: 0.8s;
-  transition-delay: 0.8s;
-}
-
-.menu__list:hover .n6 {
-  -webkit-transition-delay: 1s;
-  transition-delay: 1s;
-}
-
-.menu__list:hover .n7 {
-  -webkit-transition-delay: 1.2s;
-  transition-delay: 1.2s;
 }
 
 .cart {
@@ -669,7 +568,7 @@ body {
 
 .hero {
   min-height: 530px;
-  background: url(../img/hero.png) no-repeat center/cover;
+  background: url(../img/hero1.png) no-repeat center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,10 +668,18 @@ body {
 }
 
 .picture {
-  min-height: 340px;
-  background: url(../img/coffee.png) no-repeat center/cover;
   margin-top: 130px;
   margin-bottom: 100px;
+  min-height: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .preview {
@@ -899,11 +806,11 @@ body {
 .products__card-price--simple {
   color: rgba(29, 31, 46, 0.7);
 }
-.products__card--sale {
+.products__card-price--sale {
   color: #A25F4B;
   font-size: 19px;
 }
-.products__card--previous {
+.products__card-price--previous {
   color: rgba(29, 31, 46, 0.4);
   text-decoration: line-through;
   padding-left: 10px;
@@ -1007,10 +914,59 @@ a {
     font-size: 28px;
   }
 }
-@media screen and (max-width: 500px) {
-  .lines {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@media only screen and (max-width: 768px) {
+  .menu__list {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #ffff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .menu__list.active {
+    left: 0;
+  }
+
+  .menu__item {
+    margin: 1.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background: url(../img/hero2.png) no-repeat center/cover;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .hero {
+    background: url(../img/hero3.png) no-repeat center/cover;
   }
 }
